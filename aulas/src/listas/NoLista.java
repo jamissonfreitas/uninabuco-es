@@ -9,6 +9,11 @@ public class NoLista {
 		this.next = null;
 	}
 	
+	public NoLista(int valor, NoLista next) {
+		this.valor = valor;
+		this.next = next;
+	}
+	
 	public int getValor() {
 		return this.valor;
 	}

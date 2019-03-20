@@ -4,6 +4,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		
+		
 		Lista lista = new Lista();
 		System.out.println("Está vazia? " + lista.estaVazia());
 		lista.adicionar(67);
@@ -13,6 +14,17 @@ public class Test {
 		lista.adicionar(0);
 		lista.adicionar(111);
 		lista.print();
+		
+		
+		/*
+		NoLista a = new NoLista(2);
+		NoLista b = new NoLista(2);
+		NoLista c = a;
+		
+		b.setValor(3);
+		System.out.println(c.getValor());
+		*/
+	
 	}
 
 }

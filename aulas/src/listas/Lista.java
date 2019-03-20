@@ -40,6 +40,10 @@ public class Lista {
 	}
 	
 	// TODO
+	/*
+	 * Busca o @valor na lista e remove o NoLista correspondente.
+	 * Remove apenas a primeira ocorrência do valor na lista
+	 * */
 	public void remove(int valor) {
 		if(!this.estaVazia()) {
 			NoLista current = this.head;
@@ -52,6 +56,19 @@ public class Lista {
 				current = current.getNext();
 			} while (current != null);
 		}
+	}
+	
+	// TODO
+	/*
+	 * Remove todas as ocorrência de @valor na lista
+	 * */
+	public void removeAll(int valor) {
+		
+	}
+	
+	// TODO
+	public void remove_posicao(int posicao) {
+		
 	}
 	
 	public void print() {

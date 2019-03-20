@@ -13,6 +13,7 @@ public class Test {
 		lista.adicionar(8);
 		lista.adicionar(0);
 		lista.adicionar(111);
+		//lista.remove(23); TODO
 		lista.print();
 		
 		

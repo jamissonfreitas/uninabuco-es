@@ -15,7 +15,7 @@ public class Teste {
 		
 		System.out.println(Arrays.toString(v));
 		
-		int valor_busca = 1;
+		int valor_busca = -3;
 		
 		int index = BuscaBinaria.search(v, valor_busca);
 		System.out.println("Index encontrado: " + index);

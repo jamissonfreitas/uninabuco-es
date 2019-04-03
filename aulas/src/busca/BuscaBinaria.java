@@ -7,9 +7,9 @@ public class BuscaBinaria {
 		System.out.println("Pivot = " + pivot);
 		if(vetor[pivot] == valor)
 			return pivot;
-		if(vetor[pivot] < valor)
+		if(vetor[pivot] < valor && (pivot+1 < vetor.length))
 			return search(vetor, valor, pivot+1, index_fim);
-		if(vetor[pivot] > valor)
+		if(vetor[pivot] > valor && (pivot-1 >= 0))
 			return search(vetor, valor, index_inicio, pivot-1);
 		return -1;
 	}

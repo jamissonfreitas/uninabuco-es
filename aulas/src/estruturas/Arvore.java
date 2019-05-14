@@ -14,13 +14,30 @@ public class Arvore {
 		return this.raiz == null;
 	}
 	
-	private NoArvore inserirNoArvore(NoArvore corrente, int key) {
+	private NoArvore inserirNoArvoreBinaria(NoArvore corrente, int key) {
 		if(corrente == null) {
 			corrente = new NoArvore(key);
 		} else {
 			if(key < corrente.getChave()) {
-				NoArvore esquerda = inserirNoArvore(
-						corrente.getEsquerda(), key);
+				NoArvore esquerda = inserirNoArvoreBinaria(corrente.getEsquerda(), key);
+				corrente.setEsquerda(esquerda);
+			}
+			else {
+				NoArvore direita = inserirNoArvoreBinaria(
+						corrente.getDireita(), key);
+				corrente.setDireita(direita);
+			}
+		}
+		return corrente;
+	}
+	
+	private NoArvore inserirNoArvore(NoArvore corrente, int key) {
+		if(corrente == null) {
+			corrente = new NoArvore(key);
+		} else {
+			double random = Math.random();
+			if(random < 0.5) {
+				NoArvore esquerda = inserirNoArvore(corrente.getEsquerda(), key);
 				corrente.setEsquerda(esquerda);
 			}
 			else {
@@ -32,8 +49,11 @@ public class Arvore {
 		return corrente;
 	}
 	
-	public void inserir(int key) {
-		this.raiz = inserirNoArvore(this.raiz, key);
+	public void inserir(int key, boolean binaria) {
+		if(binaria)
+			this.raiz = inserirNoArvoreBinaria(this.raiz, key);
+		else
+			this.raiz = inserirNoArvore(this.raiz, key);
 	}
 	
 	private void imprimirNoArvore(NoArvore no, int nivel) {
@@ -66,6 +86,10 @@ public class Arvore {
 
 	public void setRaiz(NoArvore raiz) {
 		this.raiz = raiz;
+	}
+	
+	public static boolean ehBinariaBusca(Arvore arvore) {
+		return false;
 	}
 
 }

@@ -26,7 +26,7 @@ public class Test {
 		
 		System.out.println();
 		System.out.println("a é binaria de busca? " + Arvore.ehBinariaBusca(a));
-		System.out.println("a é binaria de busca? " + Arvore.ehBinariaBusca(a2));
+		System.out.println("a2 é binaria de busca? " + Arvore.ehBinariaBusca(a2));
 		
 	}
 
